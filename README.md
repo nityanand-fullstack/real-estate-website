@@ -55,7 +55,7 @@ real-estate-website/
 
 ## 👨‍💻 Author
 
-Your Name
+Nityanand payasi
 
 ---
 
