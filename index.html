@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =============================================
+       META & SEO
+  ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DreamHome Realty – Find your dream property with India's most trusted real estate advisors. Browse luxury apartments, villas, and commercial spaces." />
+  <meta name="keywords" content="real estate, properties, apartments, villas, buy property, luxury homes, India real estate" />
+  <meta name="author" content="DreamHome Realty" />
+  <meta property="og:title" content="DreamHome Realty – Find Your Dream Property" />
+  <meta property="og:description" content="Premium real estate services. Transparent pricing. Legal assistance. Loan support." />
+  <meta property="og:type" content="website" />
+  <title>DreamHome Realty | Find Your Dream Property Today</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <!-- =============================================
+       1. STICKY NAVBAR
+  ============================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon"><i class="fa-solid fa-building-columns"></i></span>
+        <span class="logo-text">Dream<strong>Home</strong></span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav Links -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home"        class="nav-link active">Home</a></li>
+          <li><a href="#properties"  class="nav-link">Properties</a></li>
+          <li><a href="#about"       class="nav-link">About</a></li>
+          <li><a href="#amenities"   class="nav-link">Amenities</a></li>
+          <li><a href="#contact"     class="nav-link">Contact</a></li>
+        </ul>
+        <a href="tel:+91" class="btn btn-primary nav-cta">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============================================
+       2. HERO SECTION
+  ============================================= -->
+  <section class="hero" id="home">
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content reveal">
+      <span class="hero-badge">India's #1 Real Estate Platform</span>
+      <h1 class="hero-title">Find Your Dream<br /><span class="gradient-text">Property Today</span></h1>
+      <p class="hero-subtitle">Discover premium homes, luxury apartments & investment-ready properties with full legal support and transparent pricing.</p>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <div class="search-group">
+          <label for="search-location"><i class="fa-solid fa-location-dot"></i></label>
+          <select id="search-location" aria-label="Select location">
+            <option value="">Select Location</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="pune">Pune</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="delhi">Delhi NCR</option>
+            <option value="chennai">Chennai</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label for="search-budget"><i class="fa-solid fa-indian-rupee-sign"></i></label>
+          <select id="search-budget" aria-label="Select budget">
+            <option value="">Select Budget</option>
+            <option value="50L">Under ₹50 Lakh</option>
+            <option value="1Cr">₹50L – ₹1 Crore</option>
+            <option value="2Cr">₹1Cr – ₹2 Crore</option>
+            <option value="5Cr">₹2Cr – ₹5 Crore</option>
+            <option value="5Cr+">Above ₹5 Crore</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label for="search-type"><i class="fa-solid fa-house"></i></label>
+          <select id="search-type" aria-label="Select property type">
+            <option value="">Property Type</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+            <option value="plot">Plot</option>
+            <option value="commercial">Commercial</option>
+            <option value="penthouse">Penthouse</option>
+          </select>
+        </div>
+        <button class="btn btn-search" onclick="filterProperties()">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </div>
+
+      <!-- Hero CTAs -->
+      <div class="hero-ctas">
+        <a href="#properties" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-list"></i> View Properties
+        </a>
+        <a href="#contact" class="btn btn-outline-white btn-lg">
+          <i class="fa-solid fa-calendar-check"></i> Book Site Visit
+        </a>
+      </div>
+
+      <!-- Hero Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span><span>+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="120">0</span><span>+</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="15">0</span><span>+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="98">0</span><span>%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       3. FEATURED PROPERTIES SECTION
+  ============================================= -->
+  <section class="section properties-section" id="properties">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Our Listings</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Properties</span></h2>
+        <p class="section-subtitle">Handpicked premium properties to match your lifestyle and investment goals.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="apartment">Apartment</button>
+        <button class="filter-btn" data-filter="villa">Villa</button>
+        <button class="filter-btn" data-filter="penthouse">Penthouse</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="plot">Plot</button>
+      </div>
+
+      <!-- Properties Grid -->
+      <div class="properties-grid" id="propertiesGrid">
+
+        <!-- Property Card 1 -->
+        <div class="property-card reveal" data-category="apartment">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Skyline Heights Apartment, Mumbai" loading="lazy" />
+            <span class="card-badge badge-sale">For Sale</span>
+            <span class="card-badge badge-featured">Featured</span>
+            <button class="card-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="card-overlay">
+              <button class="btn btn-white btn-sm" onclick="openLightbox(0)"><i class="fa-solid fa-expand"></i> View Gallery</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-price">₹1.85 Cr <span class="price-unit">onwards</span></div>
+            <h3 class="card-title">Skyline Heights</h3>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Bandra West, Mumbai</p>
+            <div class="card-specs">
+              <span><i class="fa-solid fa-vector-square"></i> 1,250 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 3 BHK</span>
+              <span><i class="fa-solid fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm full-width" onclick="openInquiry('Skyline Heights')">View Details</button>
+          </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="property-card reveal" data-category="villa">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Green Valley Villa, Pune" loading="lazy" />
+            <span class="card-badge badge-sale">For Sale</span>
+            <button class="card-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="card-overlay">
+              <button class="btn btn-white btn-sm" onclick="openLightbox(1)"><i class="fa-solid fa-expand"></i> View Gallery</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-price">₹3.50 Cr <span class="price-unit">onwards</span></div>
+            <h3 class="card-title">Green Valley Villa</h3>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Koregaon Park, Pune</p>
+            <div class="card-specs">
+              <span><i class="fa-solid fa-vector-square"></i> 3,200 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 4 BHK</span>
+              <span><i class="fa-solid fa-bath"></i> 4 Bath</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm full-width" onclick="openInquiry('Green Valley Villa')">View Details</button>
+          </div>
+        </div>
+
+        <!-- Property Card 3 -->
+        <div class="property-card reveal" data-category="penthouse">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Azure Penthouse, Bangalore" loading="lazy" />
+            <span class="card-badge badge-rent">For Rent</span>
+            <span class="card-badge badge-new">New</span>
+            <button class="card-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="card-overlay">
+              <button class="btn btn-white btn-sm" onclick="openLightbox(2)"><i class="fa-solid fa-expand"></i> View Gallery</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-price">₹95,000 <span class="price-unit">/month</span></div>
+            <h3 class="card-title">Azure Penthouse</h3>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Whitefield, Bangalore</p>
+            <div class="card-specs">
+              <span><i class="fa-solid fa-vector-square"></i> 4,800 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 5 BHK</span>
+              <span><i class="fa-solid fa-bath"></i> 5 Bath</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm full-width" onclick="openInquiry('Azure Penthouse')">View Details</button>
+          </div>
+        </div>
+
+        <!-- Property Card 4 -->
+        <div class="property-card reveal" data-category="apartment">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=600&q=80" alt="Pearl Residency, Hyderabad" loading="lazy" />
+            <span class="card-badge badge-sale">For Sale</span>
+            <button class="card-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="card-overlay">
+              <button class="btn btn-white btn-sm" onclick="openLightbox(3)"><i class="fa-solid fa-expand"></i> View Gallery</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-price">₹78 L <span class="price-unit">onwards</span></div>
+            <h3 class="card-title">Pearl Residency</h3>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Gachibowli, Hyderabad</p>
+            <div class="card-specs">
+              <span><i class="fa-solid fa-vector-square"></i> 950 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 2 BHK</span>
+              <span><i class="fa-solid fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm full-width" onclick="openInquiry('Pearl Residency')">View Details</button>
+          </div>
+        </div>
+
+        <!-- Property Card 5 -->
+        <div class="property-card reveal" data-category="commercial">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Prestige Business Hub, Delhi" loading="lazy" />
+            <span class="card-badge badge-sale">For Sale</span>
+            <button class="card-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="card-overlay">
+              <button class="btn btn-white btn-sm" onclick="openLightbox(4)"><i class="fa-solid fa-expand"></i> View Gallery</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-price">₹2.20 Cr <span class="price-unit">onwards</span></div>
+            <h3 class="card-title">Prestige Business Hub</h3>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Connaught Place, Delhi</p>
+            <div class="card-specs">
+              <span><i class="fa-solid fa-vector-square"></i> 2,100 sq ft</span>
+              <span><i class="fa-solid fa-briefcase"></i> Commercial</span>
+              <span><i class="fa-solid fa-car"></i> Parking</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm full-width" onclick="openInquiry('Prestige Business Hub')">View Details</button>
+          </div>
+        </div>
+
+        <!-- Property Card 6 -->
+        <div class="property-card reveal" data-category="plot">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Golden Acres Plot, Chennai" loading="lazy" />
+            <span class="card-badge badge-sale">For Sale</span>
+            <span class="card-badge badge-new">New</span>
+            <button class="card-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="card-overlay">
+              <button class="btn btn-white btn-sm" onclick="openLightbox(5)"><i class="fa-solid fa-expand"></i> View Gallery</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-price">₹45 L <span class="price-unit">onwards</span></div>
+            <h3 class="card-title">Golden Acres</h3>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> OMR, Chennai</p>
+            <div class="card-specs">
+              <span><i class="fa-solid fa-vector-square"></i> 1,800 sq ft</span>
+              <span><i class="fa-solid fa-land-mine-on"></i> Open Plot</span>
+              <span><i class="fa-solid fa-road"></i> Corner Plot</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm full-width" onclick="openInquiry('Golden Acres')">View Details</button>
+          </div>
+        </div>
+
+      </div><!-- /properties-grid -->
+
+      <div class="text-center reveal" style="margin-top:3rem;">
+        <a href="#contact" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-list"></i> View All Properties
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       4. WHY CHOOSE US SECTION
+  ============================================= -->
+  <section class="section why-section" id="why">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Our Advantage</span>
+        <h2 class="section-title">Why Choose <span class="gradient-text">DreamHome?</span></h2>
+        <p class="section-subtitle">We offer more than just properties – we deliver complete peace of mind.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Trusted by 500+ Clients</h3>
+          <p>Over 500 satisfied families and investors who trust us for their biggest decisions.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>Legal Assistance</h3>
+          <p>Full documentation support, title verification, and legal advisory at zero extra cost.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>Loan Support</h3>
+          <p>Tie-ups with leading banks for instant loan approvals at the best interest rates.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden charges, no surprises. What you see is exactly what you pay.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>Site Visit Assistance</h3>
+          <p>Complimentary guided site visits with our expert advisors, available 7 days a week.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>RERA Registered</h3>
+          <p>All our projects are RERA registered, ensuring full compliance and buyer protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       5. ABOUT SECTION
+  ============================================= -->
+  <section class="section about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-image reveal">
+        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=700&q=80" alt="DreamHome Realty Office" loading="lazy" />
+        <div class="about-badge-card">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <strong>Award Winning</strong>
+            <span>Best Real Estate Agency 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <span class="section-badge">About Us</span>
+        <h2 class="section-title">Building Dreams,<br /><span class="gradient-text">One Home at a Time</span></h2>
+        <p>At DreamHome Realty, we've been transforming property dreams into reality for over 15 years. Our team of seasoned real estate advisors, legal experts, and financial consultants work together to ensure every transaction is smooth, transparent, and rewarding.</p>
+        <p>From first-time homebuyers to seasoned investors, we provide personalised guidance at every step — from property search to key handover.</p>
+
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num" data-target="15">0</span><span>+</span>
+            <span>Years Experience</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num" data-target="120">0</span><span>+</span>
+            <span>Projects Completed</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num" data-target="500">0</span><span>+</span>
+            <span>Happy Clients</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-handshake"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       6. AMENITIES SECTION
+  ============================================= -->
+  <section class="section amenities-section" id="amenities">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Lifestyle</span>
+        <h2 class="section-title">World-Class <span class="gradient-text">Amenities</span></h2>
+        <p class="section-subtitle">Every project we offer comes equipped with premium amenities for a complete lifestyle.</p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-person-swimming"></i></div>
+          <h3>Swimming Pool</h3>
+          <p>Temperature-controlled infinity pool with dedicated kids' area.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <h3>Gym & Fitness</h3>
+          <p>State-of-the-art gymnasium with modern equipment and aerobics studio.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Landscaped Garden</h3>
+          <p>Beautifully manicured gardens and jogging tracks for your wellness.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>24/7 Security</h3>
+          <p>CCTV surveillance, trained guards, and smart access control systems.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-square-parking"></i></div>
+          <h3>Ample Parking</h3>
+          <p>Dedicated covered and open parking for residents and visitors.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>Clubhouse</h3>
+          <p>Premium clubhouse with event halls, sports lounge, and rooftop terrace.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-children"></i></div>
+          <h3>Children's Play Area</h3>
+          <p>Safe and vibrant play zones designed for children of all ages.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <div class="amenity-icon"><i class="fa-solid fa-wifi"></i></div>
+          <h3>High-Speed Internet</h3>
+          <p>Fibre-optic connectivity throughout the premises, free for residents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       7. LOCATION SECTION
+  ============================================= -->
+  <section class="section location-section" id="location">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Find Us</span>
+        <h2 class="section-title">Prime <span class="gradient-text">Location</span></h2>
+        <p class="section-subtitle">Strategically located with easy access to top facilities and infrastructure.</p>
+      </div>
+
+      <div class="location-grid">
+        <!-- Map -->
+        <div class="map-container reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="DreamHome Realty Location Map"
+          ></iframe>
+        </div>
+
+        <!-- Nearby Highlights -->
+        <div class="location-highlights reveal">
+          <h3>Nearby Facilities</h3>
+          <ul class="highlights-list">
+            <li><i class="fa-solid fa-graduation-cap"></i> Top Schools & Colleges – 1 km away</li>
+            <li><i class="fa-solid fa-hospital"></i> Multi-Specialty Hospitals – 2 km away</li>
+            <li><i class="fa-solid fa-cart-shopping"></i> Shopping Malls & Supermarkets – 0.5 km away</li>
+            <li><i class="fa-solid fa-train"></i> Metro Station – 800 m away</li>
+            <li><i class="fa-solid fa-plane"></i> International Airport – 15 km away</li>
+            <li><i class="fa-solid fa-utensils"></i> Restaurants & Cafés – 200 m away</li>
+            <li><i class="fa-solid fa-building"></i> IT Parks & Office Hubs – 3 km away</li>
+            <li><i class="fa-solid fa-tree"></i> Public Parks & Recreation – 1.2 km away</li>
+          </ul>
+          <a href="https://www.google.com/maps/search/DreamHome+Realty" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md">
+            <i class="fa-solid fa-directions"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       8. EMI CALCULATOR SECTION
+  ============================================= -->
+  <section class="section emi-section" id="emi">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Financial Planning</span>
+        <h2 class="section-title">EMI <span class="gradient-text">Calculator</span></h2>
+        <p class="section-subtitle">Plan your home loan with our easy-to-use EMI calculator.</p>
+      </div>
+
+      <div class="emi-grid reveal">
+        <!-- Calculator Inputs -->
+        <div class="emi-inputs">
+          <div class="emi-field">
+            <label for="loanAmount">Loan Amount (₹)</label>
+            <input type="number" id="loanAmount" placeholder="e.g. 5000000" min="100000" max="100000000" value="5000000" aria-label="Loan amount in rupees" />
+            <input type="range" id="loanRange" min="100000" max="100000000" step="100000" value="5000000" class="emi-range" aria-label="Loan amount slider" />
+            <span class="range-label">₹<span id="loanDisplay">50,00,000</span></span>
+          </div>
+          <div class="emi-field">
+            <label for="interestRate">Interest Rate (% per annum)</label>
+            <input type="number" id="interestRate" placeholder="e.g. 8.5" min="1" max="30" step="0.1" value="8.5" aria-label="Interest rate percentage" />
+            <input type="range" id="rateRange" min="1" max="20" step="0.1" value="8.5" class="emi-range" aria-label="Interest rate slider" />
+            <span class="range-label"><span id="rateDisplay">8.5</span>%</span>
+          </div>
+          <div class="emi-field">
+            <label for="tenure">Tenure (Years)</label>
+            <input type="number" id="tenure" placeholder="e.g. 20" min="1" max="30" value="20" aria-label="Loan tenure in years" />
+            <input type="range" id="tenureRange" min="1" max="30" step="1" value="20" class="emi-range" aria-label="Tenure slider" />
+            <span class="range-label"><span id="tenureDisplay">20</span> Years</span>
+          </div>
+          <button class="btn btn-primary btn-lg full-width" onclick="calculateEMI()">
+            <i class="fa-solid fa-calculator"></i> Calculate EMI
+          </button>
+        </div>
+
+        <!-- Calculator Result -->
+        <div class="emi-result" id="emiResult">
+          <div class="emi-result-card">
+            <h3>Your EMI Breakdown</h3>
+            <div class="emi-main-result">
+              <span class="emi-label">Monthly EMI</span>
+              <span class="emi-value" id="emiValue">₹43,392</span>
+            </div>
+            <div class="emi-breakdown">
+              <div class="emi-row">
+                <span>Principal Amount</span>
+                <span id="principalDisplay">₹50,00,000</span>
+              </div>
+              <div class="emi-row">
+                <span>Total Interest</span>
+                <span id="totalInterest">₹54,14,080</span>
+              </div>
+              <div class="emi-row total-row">
+                <span>Total Amount Payable</span>
+                <span id="totalPayable">₹1,04,14,080</span>
+              </div>
+            </div>
+            <!-- Donut Chart -->
+            <div class="emi-chart-wrapper">
+              <canvas id="emiChart" width="200" height="200" aria-label="EMI breakdown chart"></canvas>
+              <div class="chart-legend">
+                <span class="legend-dot principal-dot"></span><span>Principal</span>
+                <span class="legend-dot interest-dot"></span><span>Interest</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-md full-width" style="margin-top:1.5rem;">
+              <i class="fa-solid fa-phone"></i> Apply for Home Loan
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       9. INQUIRY / CONTACT FORM SECTION
+  ============================================= -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Request a <span class="gradient-text">Callback</span></h2>
+        <p class="section-subtitle">Fill in the details below and our expert advisor will contact you within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>Reach out to us via any of the channels below or fill in the inquiry form.</p>
+          <ul class="contact-list">
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Call Us</strong>
+                <a href="tel:+91xxxxxxxx">+91 xxxxxxxx</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/91xxxx" target="_blank" rel="noopener noreferrer">+91xxxxxx</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email Us</strong>
+                <a href="mailto:info@dreamhomerealty.in">info@dreamhomerealty.in</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Visit Us</strong>
+                <span>14, Prestige Tower, MG Road, Mumbai – 400001</span>
+              </div>
+            </li>
+          </ul>
+          <div class="working-hours">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon – Sat: 9:00 AM – 7:00 PM | Sun: 10:00 AM – 4:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <form class="inquiry-form" id="inquiryForm" novalidate>
+          <input type="hidden" id="formPropertyName" value="" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientName">Full Name *</label>
+              <input type="text" id="clientName" placeholder="Your full name" required autocomplete="name" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="clientPhone">Phone Number *</label>
+              <input type="tel" id="clientPhone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel" />
+              <span class="form-error" id="phoneError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientEmail">Email Address *</label>
+            <input type="email" id="clientEmail" placeholder="your@email.com" required autocomplete="email" />
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientBudget">Budget</label>
+              <select id="clientBudget">
+                <option value="">Select Budget</option>
+                <option>Under ₹50 Lakh</option>
+                <option>₹50L – ₹1 Crore</option>
+                <option>₹1Cr – ₹2 Crore</option>
+                <option>₹2Cr – ₹5 Crore</option>
+                <option>Above ₹5 Crore</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="clientType">Property Type</label>
+              <select id="clientType">
+                <option value="">Select Type</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Penthouse</option>
+                <option>Commercial</option>
+                <option>Plot</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientMessage">Message (Optional)</label>
+            <textarea id="clientMessage" rows="4" placeholder="Tell us your requirements…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg full-width" id="submitBtn">
+            <i class="fa-solid fa-paper-plane"></i> Send Inquiry
+          </button>
+
+          <p class="form-disclaimer">
+            <i class="fa-solid fa-lock"></i> Your information is 100% secure and will never be shared.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       10. TESTIMONIALS SECTION
+  ============================================= -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Client Stories</span>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+        <p class="section-subtitle">Real stories from real families who found their dream homes with us.</p>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"DreamHome made our home buying journey absolutely stress-free. From property search to loan disbursal, everything was handled perfectly. Highly recommended!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&q=80" alt="Rajesh Sharma" loading="lazy" />
+            <div>
+              <strong>Rajesh Sharma</strong>
+              <span>Bought 3 BHK in Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Excellent service! The team was transparent about all costs and helped us negotiate a great price. The legal team cleared all our doubts. Truly a premium experience."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b68d44ed?w=80&h=80&fit=crop&q=80" alt="Priya Nair" loading="lazy" />
+            <div>
+              <strong>Priya Nair</strong>
+              <span>Invested in Bangalore Villa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p>"As a first-time buyer, I was nervous, but the DreamHome team guided me at every step. They helped me get a home loan at just 7.9% interest. Couldn't be happier!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&q=80" alt="Arjun Mehta" loading="lazy" />
+            <div>
+              <strong>Arjun Mehta</strong>
+              <span>Bought 2 BHK in Hyderabad</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       11. FAQ SECTION (Accordion)
+  ============================================= -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-subtitle">Got questions? We've got answers. If you need more help, just contact us.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-accordion reveal" id="faqAccordion">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What documents are required to buy a property?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>You'll typically need: Aadhaar Card, PAN Card, income proof (salary slips / IT returns), bank statements (6 months), passport-size photos, and the property documents. Our legal team will guide you through the complete checklist.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you help with home loan processing?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. We have partnerships with SBI, HDFC, ICICI, Axis Bank, and LIC Housing Finance. Our financial advisors will compare rates and process your application for the best deal.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How do I book a site visit?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Simply fill out the inquiry form on this page or call us at +91 98765 43210. Our site visit coordinator will schedule a convenient time and arrange complimentary transportation if required.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Are your properties RERA registered?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, 100%. All properties listed with DreamHome Realty are RERA registered, ensuring full transparency, legal compliance, and buyer protection as mandated by Indian law.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is the minimum investment to start?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We have properties starting as low as ₹35 Lakhs for plots and ₹65 Lakhs for apartments. With home loan options, your EMI could start from as little as ₹28,000 per month.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you charge any brokerage fees?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our consultation and site visit services are completely free for buyers. Any applicable brokerage is transparently communicated upfront before any agreement is signed.</p>
+            </div>
+          </div>
+
+        </div><!-- /faq-accordion -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       12. STRONG CTA SECTION
+  ============================================= -->
+  <section class="cta-section">
+    <div class="container cta-content reveal">
+      <h2>Your Dream Home Is <span class="gradient-text-light">One Call Away</span></h2>
+      <p>Speak with our property experts today. No obligations, no pressure – just honest advice.</p>
+      <div class="cta-buttons">
+        <a href="tel:+91xxxxxxxx" class="btn btn-white btn-lg">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+        <a href="https://wa.me/91xxxxxxx" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </a>
+        <a href="#contact" class="btn btn-outline-white btn-lg">
+          <i class="fa-solid fa-calendar-check"></i> Schedule Site Visit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       13. FOOTER
+  ============================================= -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <span class="logo-text">Dream<strong>Home</strong></span>
+          </a>
+          <p>India's most trusted real estate advisors. Making home ownership simple, transparent, and rewarding.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#emi">EMI Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Property Types -->
+        <div class="footer-col">
+          <h4>Property Types</h4>
+          <ul>
+            <li><a href="#properties">Apartments</a></li>
+            <li><a href="#properties">Villas</a></li>
+            <li><a href="#properties">Penthouses</a></li>
+            <li><a href="#properties">Plots</a></li>
+            <li><a href="#properties">Commercial Spaces</a></li>
+            <li><a href="#properties">Luxury Homes</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 14, Prestige Tower, MG Road, Mumbai – 400001</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+91xxxxxxx">+91xxxxxxxx</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@dreamhomerealty.in">info@dreamhomerealty.in</a></li>
+            <li><i class="fa-solid fa-clock"></i> Mon–Sat: 9AM–7PM</li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 DreamHome Realty. All rights reserved. | RERA Reg. No. MH/RERA/P51800123456</p>
+        <p>
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Terms of Service</a> |
+          <a href="#">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       FLOATING WHATSAPP BUTTON
+  ============================================= -->
+  <a href="https://wa.me/91xxxxxxx" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- =============================================
+       LIGHTBOX MODAL
+  ============================================= -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Property image gallery">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close gallery">&times;</button>
+    <button class="lightbox-prev" onclick="lightboxPrev()" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-next" onclick="lightboxNext()" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Property gallery image" />
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- =============================================
+       SUCCESS POPUP MODAL
+  ============================================= -->
+  <div class="popup-overlay" id="successPopup" role="dialog" aria-modal="true" aria-label="Inquiry submitted successfully">
+    <div class="popup-card">
+      <div class="popup-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h3>Thank You!</h3>
+      <p>Your inquiry has been successfully submitted. Our expert advisor will contact you within <strong>24 hours</strong>.</p>
+      <div class="popup-actions">
+        <a href="https://wa.me/91xxxxxxxx" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-md">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </a>
+        <button class="btn btn-primary btn-md" onclick="closePopup()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
