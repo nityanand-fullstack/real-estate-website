@@ -2055,7 +2055,7 @@ input, select, textarea {
   .section { padding: 3.5rem 0; }
 
   /* Navbar mobile */
-  .hamburger { display: flex; }
+  .hamburger { display: flex;  margin-left: -2px;  }
 
   /* Dark backdrop behind sidebar menu */
   .nav-menu::before {
